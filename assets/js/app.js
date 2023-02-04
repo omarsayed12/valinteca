@@ -81,7 +81,7 @@ const sendMessageToEmail = () => {
   console.log(formData);
   fetch("https://formsubmit.co/ajax/omarkhashaba123@gmail.com", {
     method: "POST",
-    headers: { "=Content-Type": "application/json", Accept: "application/json" },
+    headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify({
       name: "FormSubmit",
       message: "I'm from Devro LABS",
