@@ -100,4 +100,4 @@ const sendMessageToEmail = () => {
   console.log(formData);
 };
 
-// submitBtn.addEventListener("click", sendMessageToEmail);
+submitBtn.addEventListener("click", sendMessageToEmail);
