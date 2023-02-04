@@ -1,0 +1,301 @@
+.about-us {
+  @extend .py;
+  &__title {
+    @extend %section-header-style;
+  }
+  &__description {
+    @extend %sectoin-description-style;
+  }
+  &__bio {
+    @include flexRow;
+    margin-top: 2rem;
+    .about-us__hero {
+      @include flex-grow-shrink-basis($flex-grow: 0, $flex-shrink: 0, $flex-basis: 50%);
+      img {
+        max-width: 100%;
+        @include prefix(transform, scale(0.95), moz webkit o ms);
+      }
+    }
+    .about-us__container {
+      @include flex-grow-shrink-basis($flex-grow: 0, $flex-shrink: 0, $flex-basis: 45%);
+      .bio-title {
+        @extend .font-color;
+      }
+      .bio-description {
+        @extend %sectoin-description-style;
+        text-align: justify;
+        padding-right: 10%;
+      }
+
+      .about-list {
+        margin-top: 2rem;
+        &__title {
+          @extend .font-color;
+          font-size: $font-mediumSize;
+        }
+        &__help {
+          margin-left: 2rem;
+          margin-top: 1rem;
+          li {
+            margin-top: 1rem;
+            margin-right: 6rem;
+            h4 {
+              @include flex($display: flex, $justify: flex-start, $align-item: center);
+              @include flexContainer(flex-start, center);
+              @include prefix(transition, all 0.5s ease-in-out, moz webkit o ms);
+              @extend .font-color;
+              font-size: $font-mediumSize;
+              img {
+                margin-right: 7px;
+                width: 28px;
+              }
+            }
+            p {
+              @extend %sectoin-description-style;
+              text-align: initial;
+              margin-top: 0.5rem;
+              margin-left: 2.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.our-vision {
+  @extend .py;
+
+  #tsparticlesVision {
+    @extend %absoluteFullWidth;
+  }
+  &__title {
+    @extend %section-header-style;
+  }
+  &__description {
+    @extend %sectoin-description-style;
+  }
+  &__bio {
+    position: relative;
+    height: 75vh;
+    margin-top: 2rem;
+    box-shadow: 0 40rem inset rgb(0 36 84 / 75%);
+    border-radius: 30px;
+    @extend %flex-center;
+    @include bgImage(url("../imgs/ourVsion_V2.png"), center, center);
+    strong {
+      color: $color-white;
+      font-size: $font-extraX2Size;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      letter-spacing: 2.5px;
+      line-height: 1.6;
+    }
+  }
+}
+
+.tec-contribution {
+  display: none;
+  &__title {
+    @extend %section-header-style;
+  }
+  &__description {
+    @extend %sectoin-description-style;
+  }
+  &__container {
+    padding: 0 6%;
+    margin-top: 2rem;
+    .card {
+      &-heading {
+        @extend .font-color;
+        font-size: 17px;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+      &-details {
+        @extend %sectoin-description-style;
+        margin: 0.8rem 0.2rem 1.1rem;
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .btn-get__package {
+        @extend %btn-global;
+        background-color: $color-main;
+      }
+    }
+  }
+}
+
+.testimonials {
+  &__title {
+    @extend %section-header-style;
+  }
+  &__description {
+    @extend %sectoin-description-style;
+  }
+  .our-client__testimonial {
+    margin-top: 2rem;
+    .container {
+      position: relative;
+    }
+    @include bgImage(url("../imgs/Review-background2.png"), top, center);
+    background-size: 100% 95%;
+    .review {
+      text-align: center;
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: auto;
+        padding: 4px;
+        border-radius: 50%;
+        border: 4px solid $color-white;
+      }
+      p {
+        @extend %sectoin-description-style;
+        max-width: 870px;
+        color: $color-white;
+        line-height: 1.8;
+        margin: 2.5rem auto 0;
+      }
+      .client-data {
+        padding: 3rem 0;
+        .client-name {
+          @extend .font-color;
+          font-size: 17px;
+          letter-spacing: 0.8px;
+          text-align: center;
+          text-transform: capitalize;
+          margin-top: 1.5rem;
+          color: $color-white;
+        }
+        .client-job {
+          display: block;
+          color: #e3e3e3;
+          font-size: 13px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.our-team {
+  text-align: center;
+  small {
+    font-weight: $font-weight-medium;
+    font-size: $font-mediumSize;
+    color: $color-blue-dark;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  @extend .py;
+  &__title {
+    @extend %section-header-style;
+  }
+  &__description {
+    @extend %sectoin-description-style;
+  }
+  &__details {
+    margin-top: 2rem;
+    .card-column {
+      @include flexContainer(center, center);
+      flex-wrap: wrap;
+      column-gap: 30px;
+      .card {
+        margin-bottom: 2rem;
+        height: 100%;
+        width: 100%;
+        perspective: 500px;
+
+        @include flex-grow-shrink-basis($flex-grow: 0, $flex-shrink: 0, $flex-basis: 18%);
+        .info {
+          position: relative;
+          height: 266px;
+          width: 100%;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          transform-style: preserve-3d;
+          @include prefix(transition, transform 1.3s, moz webkit o ms);
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          .info-filp-front,
+          .info-filp-back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+          }
+
+          .info-filp-back {
+            @include flexContainer(center, center);
+            column-gap: 15px;
+            background: #03446a;
+            transform: rotateY(180deg);
+            overflow: hidden;
+            img {
+              @extend %absoluteFullWidth;
+              opacity: 0.1;
+              transform: rotateY(-180deg);
+            }
+            a {
+              transform: translateY(600%);
+              svg {
+                border-radius: 6px;
+                transform: scale(0.9);
+                @include prefix(transition, all 0.4s ease-in-out, moz webkit o ms);
+                &:hover {
+                  opacity: 0.4;
+                }
+              }
+            }
+            .info-filp__github {
+              svg {
+                background-color: #fff;
+                height: 30px;
+              }
+            }
+            .info-filp__linked {
+              svg {
+                background-color: rgb(53 137 249);
+              }
+            }
+          }
+        }
+        &:hover .info {
+          transform: rotateY(180deg);
+          @include prefix(transition, transform 1s, moz webkit o ms);
+        }
+        &:hover .info-filp-back a {
+          transform: translateY(0%);
+        }
+        @for $i from 1 through 3 {
+          .info-filp-back a:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.3s;
+            transition-duration: ($i * 0.1s) + 0.5s;
+          }
+        }
+      }
+
+      h4 {
+        @extend .font-color;
+        font-size: $font-mediumSize;
+        font-weight: $font-weight-semibold;
+        text-transform: capitalize;
+        margin-top: 0.6rem;
+      }
+      p {
+        @extend %sectoin-description-style;
+        text-transform: capitalize;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+}

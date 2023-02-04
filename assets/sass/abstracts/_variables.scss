@@ -1,0 +1,46 @@
+//*FONT FAMILY
+$font-stack: Montserrat, sans-serif;
+
+//*VARIABLES FOR COLORS
+$color-main: #ff3d00;
+$color-blue-dark: #002454;
+
+$color-black: #000;
+$color-black-light: #323232;
+
+$color-grey-dark: #3d3d3d;
+$color-grey-light: #efefef;
+$color-white: #ffff;
+
+$color-orange-dark: #f87a1d;
+$color-orange-light: #fff5f3;
+$color-SeaGreen-dark: #02504a;
+
+//*VARAIBLE FOR FONT Weight
+$font-weight-light: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+//*VARAIBLE FOR FONT SIZE
+$font-smallSize: 12px;
+$font-mediumSize: 16px;
+$font-mediumXSize: 20px;
+$font-largeSize: 26px;
+$font-extraSize: 35px;
+$font-extraX2Size: 40px;
+
+// *ZINDEX ELEMENTS
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3;
+$z-index-4: 4;
+$z-index-5: 5;
+$z-index-6: 6;
+
+//*VARIABLE FOR GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;

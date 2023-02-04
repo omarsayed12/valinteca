@@ -1,0 +1,151 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+%flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+%flex-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+%absoluteFullWidth {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+%logo {
+  max-width: 130px;
+  object-fit: cover;
+}
+
+%btns-header {
+  width: 140px;
+  color: $color-blue-dark;
+  font-size: 15px;
+  font-weight: $font-weight-medium;
+  padding: 6px 0;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 30px;
+}
+
+%btn-global {
+  display: inline-block;
+  width: 100%;
+  color: $color-white;
+  font-size: 15px;
+  font-weight: $font-weight-medium;
+  padding: 6px 0;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 30px;
+}
+
+%section-header-style {
+  color: $color-blue-dark;
+  font-size: $font-largeSize;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+
+%sectoin-description-style {
+  color: $color-grey-dark;
+  font-size: $font-mediumSize;
+  font-weight: $font-weight-medium;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
+.font-color {
+  font-size: $font-mediumXSize;
+  font-weight: $font-weight-bold;
+  color: $color-blue-dark;
+  text-transform: capitalize;
+}
+
+.position-flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.font-color-v2 {
+  color: $color-grey-dark;
+  font-size: 15px;
+  font-weight: $font-weight-light;
+  text-transform: capitalize;
+  letter-spacing: 1.1px;
+}
+
+.font-color-v3 {
+  color: $color-blue-dark;
+  font-size: 15px;
+  font-weight: $font-weight-medium;
+  text-transform: capitalize;
+}
+
+%social-icon-style {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.dots {
+  content: "";
+  position: absolute;
+  left: -1.2rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $color-main;
+}
+.py {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+%animation-links {
+  color: $color-main;
+  transform: translate(5px, 0);
+}
+
+@include media-phone {
+  .container {
+    max-width: 100%;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+  %section-header-style {
+    font-size: 21px;
+    letter-spacing: 1px;
+  }
+  %sectoin-description-style {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .font-color {
+    font-size: 18px;
+  }
+  .py {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

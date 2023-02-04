@@ -1,0 +1,110 @@
+@mixin scrollbars($size, $color-blue-dark, $color-main: mix($color-blue-dark, white, 50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-blue-dark;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-main;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $color-blue-dark;
+    scrollbar-track-color: $color-main;
+  }
+}
+
+@mixin flex($display: flex, $justify: center, $align-item: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align-item;
+}
+
+@mixin flexContainer($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-grow-shrink-basis($flex-grow: 0, $flex-shrink: 0, $flex-basis: 50%) {
+  flex-grow: $flex-grow;
+  flex-shrink: $flex-shrink;
+  flex-basis: $flex-basis;
+}
+
+@mixin bgImage($image, $x: center, $y: top) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    size: cover;
+    position: $x $y;
+  }
+}
+
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// @mixin transition-ease($prop) {
+//   -webkit-transition: $prop;
+//   -moz-transition: $prop;
+//   -o-transition: $prop;
+//   -ms-transition: $prop;
+//   transition: $prop;
+// }
+
+// @mixin transformElment($property) {
+//   -webkit-transform: $property;
+//   -moz-transform: $property;
+//   -o-transform: $property;
+//   -ms-transform: $property;
+//   transform: $property;
+// }
+
+@mixin media-phone {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+@mixin small-phone {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+@mixin media-tab-port {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-tab-land {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-big-desktop {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

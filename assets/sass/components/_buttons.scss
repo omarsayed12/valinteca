@@ -1,0 +1,88 @@
+.btns-hero {
+  @extend %flex-center;
+  position: relative;
+  column-gap: 15px;
+  z-index: $z-index-2;
+  :is(.btn-v__projects, .btn-v__contact) {
+    border: 1.5px solid transparent;
+    @extend %btns-header;
+    @include prefix(transition, background-color 0.4s ease-in-out, moz webkit o ms);
+  }
+  .btn-v__projects {
+    background-color: $color-main;
+    color: $color-white;
+    &:hover {
+      background-color: #ffffff3d;
+      color: $color-main;
+      border-color: $color-main;
+    }
+  }
+  .btn-v__contact {
+    background-color: $color-white;
+    &:hover {
+      background-color: #ff3d0054;
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
+}
+
+.btn-visit__project {
+  @extend %flex-center;
+  font-size: $font-mediumXSize;
+  font-weight: $font-weight-medium;
+  letter-spacing: 1.2px;
+  svg {
+    @include prefix(transition, all 0.3s ease-in-out, moz webkit o ms);
+    margin-right: 15px;
+  }
+  &:hover svg {
+    transform: translateX(6rem) scale(1.2);
+    path {
+      fill: $color-main;
+    }
+  }
+}
+
+.project-item__p1,
+.project-item__p3 {
+  .btn-visit__project {
+    color: $color-SeaGreen-dark;
+  }
+}
+
+.project-item__p2,
+.project-item__p4 {
+  .btn-visit__project {
+    color: $color-orange-dark;
+  }
+}
+
+.btn-send__message {
+  width: 100%;
+  color: $color-white;
+  background-color: $color-blue-dark;
+  font-size: $font-mediumSize;
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  @extend %flex-center;
+  @include prefix(transition, all 0.4s ease-in-out, moz webkit o ms);
+  svg {
+    @include prefix(transition, all 0.4s ease-in-out, moz webkit o ms);
+    margin-left: 0.3rem;
+  }
+  &:hover {
+    background-color: transparent;
+    border-color: $color-blue-dark;
+    color: $color-blue-dark;
+
+    svg path {
+      fill: $color-blue-dark;
+    }
+    svg {
+      transform: rotate(8deg) translate(9px, -6px);
+    }
+  }
+}

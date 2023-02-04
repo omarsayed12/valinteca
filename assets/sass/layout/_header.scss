@@ -1,0 +1,28 @@
+.hero-valinteca {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  @extend %flex-center;
+  @include bgImage(url("../imgs/HeroSection.png"));
+  #tsparticles {
+    @extend %absoluteFullWidth;
+  }
+  &__summary {
+    .hero-title {
+      font-weight: $font-weight-extrabold;
+      font-size: $font-extraSize;
+      color: $color-white;
+      letter-spacing: 2.5px;
+      line-height: 1.6;
+      &__br {
+        display: block;
+      }
+    }
+    .hero-description {
+      margin: 1rem 0 1.4rem;
+      font-size: 18px;
+      color: $color-white;
+      line-height: 1.9;
+    }
+  }
+}
