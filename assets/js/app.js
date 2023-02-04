@@ -95,9 +95,9 @@ const sendMessageToEmail = () => {
       alert("successfully sent");
     })
     .catch(() => {
-      // alert("something wrong happened");
+      alert("something wrong happened");
     });
   console.log(formData);
 };
 
-// submitBtn.addEventListener("click", sendMessageToEmail);
+submitBtn.addEventListener("click", sendMessageToEmail);
